@@ -8,7 +8,8 @@ import 'repositories/poke_repository.dart';
 class HomeModule extends ChildModule {
   @override
   List<Bind> get binds => [
-        Bind((i) => HomeController(i.get<PokeRepository>())),
+        //Bind((i) => HomeController(i.get<PokeRepository>())),
+        $HomeController,
         Bind((i) => PokeRepository(i.get<Dio>())),
       ];
 
